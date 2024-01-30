@@ -1,0 +1,31 @@
+#home-col{
+    gap:2.4rem;
+    display: flex;
+}
+
+#home-div-title{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+}
+/*IMG home*/
+#home-div-img{
+    display: flex;
+    justify-content: center;
+}
+#home-img{
+    
+    border-color: rgb(5, 205, 98);
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 50%;
+    width: calc(20rem + 3vw);
+    height: calc(20rem + 3vw);
+    /* max-width: calc(50% - -5vw);
+    max-height: calc(100% - 10vh); */
+}
+
+#home-div-p  p{
+    font-size: var(--font-size-p);
+}

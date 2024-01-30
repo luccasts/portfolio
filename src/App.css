@@ -1,202 +1,96 @@
 @font-face {
     font-family: 'Dosis';
-    src: url(./fontes/Dosis-VariableFont.ttf);
+    src: url(./fonts/Dosis-VariableFont.ttf);
 }
 
-/* MEDIA QUERRYYYYY*/
+/*
+    --background-color-main: linear-gradient(#333333, #2c2c2c);
+*/
+:root{
+    font-size: 62.5%;
+    --color-text:#fafafc;
+    --color-text-subtitle:#b9b9b9;
 
+
+    --background-color-main: linear-gradient(#181818, #080808);
+
+
+    --box-shadow-left:#272727;
+    --box-shadow-right:#222222;
+    --color-title:#17cf1d;
+
+    --font-size-p:calc(1.375rem + 1.5vw);
+    --font-size-h1:calc(1.5rem + 2vw);
+
+    font-family: 'Dosis';
+    
+}
+
+body{  
+    color: var(--color-text);
+}
+
+
+
+.full-size-background{
+    width: 100%;
+    min-height:100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-size:cover;
+    background: var(--background-color-main);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment:unset;
+    
+}
+
+#Container{
+    padding: 5%;
+    border-radius: 2rem;
+    box-shadow: .5px .5px 2px var(--box-shadow-right), -0.5px -0.5px 2px  var(--box-shadow-left);
+    display: flex;
+    align-items: self-start;
+    display: flex;
+    flex-direction: column;
+    gap:2.4rem;
+    font-family: 'Dosis';
+    color:#fafafc;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+}
+h1{
+    color: var(--color-title);
+    font-size: var(--font-size-h1);
+    font-weight: 400;
+}
+
+
+
+
+
+/* MEDIA QUERRYYYYY*/
+@media screen  and (max-width:475px){
+    #home-col{
+        gap: 1.6rem;
+        display: flex;
+        flex-direction: column;
+    
+    }
+}
 @media screen and (max-width: 768px){
-    #Home{
-        margin-top: 5%;
+    .full-size-background{
+        gap:4rem;
     }
 }
 
 @media screen and (min-width: 960px){
-    #Home{
-       margin-top: 150px;
+    .full-size-background{
+        gap:4rem;
     }
     
 }
-
-
-
-
-
-
-
-/* parallax*/
-.full-size-background{
-    width: 100%;
-    height:1200px;
-    
-    background-size:cover;
-    background: linear-gradient(#333333, #2c2c2c);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment:unset;
-  
-}
-
-
-
-/* NAVBAR*/
-
-
-a.nav-link {
-    background-color: rgba(48, 56, 56, 0.225);
-    margin-left: 5px;
-    border-radius: 5px;
-   
-   
-}
-
-a.nav-link:hover{
-    border-bottom: 1px solid rgb(90, 235, 160);
-}
-
-
-
-
-
-/*
-
-
-
-Inicio 
-
-
-
-
-*/
-
-
-#Home{
-    font-family: 'Dosis';
-    color:white;
-    padding:0px 0px 0px 0px;
-}
-
-
-
-
-/*Títulos home*/
-
-
-.div-title-main{
-    
-    width: 350px;
-    
-    margin-top: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    
-
-    display: flex;  
-    padding: 5px;
-    margin-bottom: 5px;
-    
-    border: 1px solid rgba(255, 255, 255, 0.235);
-    border-radius: 5px;
-    box-shadow: 2px 2px 1px solid black;
-     
-    font-size: 50px;
-    font-weight: 400;
-    
-   
-    
-}
-.title-main {
-    margin: auto auto;
-}
-
-.div-title-secondary{
-    height: 80px;
-    width: 350px;
-    
-    overflow: hidden;
-    background-color: #dddada1f;
-    
-    border-radius: 5px 5px 5px 3px;
-    
-    margin-left: auto;
-    margin-right: auto;
-}
-.title-secondary{
-    margin: auto auto;
-    animation-name: HiddentoShow;
-    border-right: 2px solid gray;
-    
-    animation: HiddentoShow 5s infinite normal, typing steps(45) 1s normal;
-    
-    white-space: nowrap ;
-    overflow: hidden;
-}
-
-.title-secondary-desenvolvedor{
-    animation: HiddentoShow 5s infinite normal, typing steps(45) 1s normal ;
-}
-
-/*Animations*/
-
-
-@keyframes HiddentoShow {
-    from{
-       
-        width: 0;
-        
-    }
-    
-    to{
-       
-        
-        width: 18em;
-        
-    }
-}
-
-
-/*Títulos home /FIM[
-     background-image: url(img/space-gabb.jpg);
-*/
-
-
-
-
-/***************Sliders ***************/
-
-.div-photo{
-   
-    background: #43b457c9;
-    
-    width: 303px;
-    height: 303px;
-    border-radius: 200px;
-    
-    border: 2px solid rgb(214, 227, 221);
-    display: flex;
-    justify-content: right;
-    
-    margin-top: 10px;
-    margin-left: auto;
-    margin-right: auto;
-
-}
-
-.div-photo:hover{
-    background: #45814392;
-}
-
-
-
-.photo{
-    margin: auto auto;
-    border: 2px solid  rgb(90, 235, 160);
-    border-radius: 150px;
-}
-
-.photo:hover{
-    border-color: #fff;
-    cursor: pointer;
-}
-
-

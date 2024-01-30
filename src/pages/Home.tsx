@@ -1,10 +1,15 @@
+import {Container } from "react-bootstrap";
 
-import "../App.css"
-import { Sliders } from "../components/Sliders";
+import { FooterComponent } from "../components/Footer/Footer";
+import { Main } from "../components/Main/Main";
+
+
 
 export const Home = () => {
     return (
-            <Sliders/>
-        
-    );
-}   
+        <Container id='Container'>
+            <Main />
+            <FooterComponent />      
+        </Container>
+    )
+}
