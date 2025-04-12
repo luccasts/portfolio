@@ -1,0 +1,16 @@
+#header {
+  margin: 0 auto;
+}
+
+#header ul {
+  display: flex;
+  gap: 12px;
+  list-style: none;
+  justify-content: center;
+}
+
+#header ul li {
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: overline;
+}

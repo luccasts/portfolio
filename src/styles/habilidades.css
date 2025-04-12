@@ -1,23 +1,19 @@
-
 /*Habilidades*/
-#Habilidades{  
-    text-align: center;
-    width: 100%;
-    gap: 1.6rem;
-
+#Habilidades {
+  text-align: center;
+  width: 100%;
+  gap: 1.6rem;
 }
 #icons img {
-    width: calc(3rem + 2vw);
-    height: calc(3rem + 2vw);
+  width: calc(3rem + 2vw);
+  height: calc(3rem + 2vw);
 }
 
-#Github-p{
-    color:var(--color-text-subtitle);
-    font-size:1.6rem;
+#Github-p {
+  color: var(--color-text-subtitle);
+  font-size: 1.6rem;
 }
 
-#Github img{
-    min-width: calc(40vw - 30px);
-   
+#Github img {
+  min-width: calc(40vw - 30px);
 }
-

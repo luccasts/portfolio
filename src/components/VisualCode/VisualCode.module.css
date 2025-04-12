@@ -1,0 +1,209 @@
+/* .vscode-window {
+  border: 1px solid #333;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.title-bar {
+  background: #2c2c2c;
+  color: #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  height: 30px;
+}
+
+.window-buttons {
+  display: flex;
+  gap: 6px;
+}
+
+.window-buttons .btn {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.btn.close {
+  background: #ff5f56;
+}
+.btn.minimize {
+  background: #ffbd2e;
+}
+.btn.maximize {
+  background: #27c93f;
+}
+
+.main {
+  display: flex;
+  flex: 1;
+}
+
+.sidebar {
+  width: 50px;
+  background: #252526;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+  gap: 20px;
+}
+
+.sidebar .icon {
+  font-size: 18px;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.editor {
+  flex: 1;
+  background: #1e1e1e;
+  display: flex;
+  flex-direction: column;
+}
+
+.tab-bar {
+  background: #2d2d2d;
+  display: flex;
+  padding: 4px;
+}
+
+.tab {
+  padding: 6px 12px;
+  margin-right: 4px;
+  background: #3c3c3c;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.tab.active {
+  background: #1e1e1e;
+  border-bottom: 2px solid #007acc;
+}
+
+.code {
+  flex: 1;
+  overflow: auto;
+  padding: 16px;
+  background: #1e1e1e;
+  white-space: pre;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.mouse {
+} */
+
+.window {
+  background-color: rgb(24, 24, 24);
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  color: white;
+}
+
+.nav {
+  padding: 10px 10px 0px 10px;
+  background-color: rgb(44, 44, 44);
+}
+
+.nav_files ul {
+  display: flex;
+  gap: 4px;
+  list-style: none;
+
+  margin: 0px 0px 0px 30px;
+  padding: 16px 16px 8px 16px;
+}
+
+.nav_files li {
+  background-color: rgb(25, 25, 25);
+  padding: 8px;
+}
+
+.nav_names {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav_files .nav_files_select {
+  background-color: rgb(52, 52, 52);
+}
+
+.nav_files .page_active {
+  background-color: rgb(34, 34, 34);
+  border-bottom: 2px solid rgb(0, 255, 21);
+}
+.aside {
+  position: absolute;
+  top: 36px;
+  bottom: 0;
+  background-color: rgb(38, 38, 38);
+}
+
+.asideUl_background {
+  background-color: rgb(38, 38, 38);
+  position: relative;
+  top: 0;
+}
+
+.aside ul {
+  display: flex;
+  flex-direction: column;
+
+  list-style: none;
+}
+
+.aside .asideUl_background li {
+  padding: 12px;
+  cursor: pointer;
+  border-bottom: 1px solid transparent;
+}
+
+.aside .asideUl_background li:hover {
+  position: relative;
+  background-color: rgb(35, 35, 35);
+  border-bottom: 1px solid var(--color-p);
+}
+.aside_nav {
+  position: absolute;
+  top: 0;
+  left: 50px;
+  bottom: 0;
+  background-color: rgb(32, 32, 32);
+}
+.aside_nav_div_title {
+  padding: 24px;
+  background-color: rgb(44, 44, 44);
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+.aside_nav_div_title span {
+  color: var(--color-p);
+}
+
+.aside_nav_div_title:hover {
+  cursor: pointer;
+  background-color: rgb(22, 22, 22);
+}
+.aside_nav_Ul_projetos {
+  display: flex;
+  gap: 10px;
+}
+.aside_nav_Ul_projetos div {
+  width: 80%;
+  margin: auto;
+}
+
+.main {
+  width: 90%;
+  margin: auto;
+  margin: 15px auto auto 80px;
+  color: var(--color-p);
+}

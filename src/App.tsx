@@ -1,12 +1,12 @@
-import React from 'react';
-import { Home } from './pages/Home';
-import "./App.css"
-
+import "./App.css";
+import { HackerParticles } from "./components/HackerParticles/HackerParticles";
+import { Home } from "./pages/Home";
 
 function App() {
   return (
-    <div className='App full-size-background' >
-      <Home/>
+    <div>
+      <HackerParticles />
+      <Home />
     </div>
   );
 }
