@@ -1,103 +1,3 @@
-/* .vscode-window {
-  border: 1px solid #333;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-.title-bar {
-  background: #2c2c2c;
-  color: #ccc;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 10px;
-  height: 30px;
-}
-
-.window-buttons {
-  display: flex;
-  gap: 6px;
-}
-
-.window-buttons .btn {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  display: inline-block;
-}
-
-.btn.close {
-  background: #ff5f56;
-}
-.btn.minimize {
-  background: #ffbd2e;
-}
-.btn.maximize {
-  background: #27c93f;
-}
-
-.main {
-  display: flex;
-  flex: 1;
-}
-
-.sidebar {
-  width: 50px;
-  background: #252526;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10px 0;
-  gap: 20px;
-}
-
-.sidebar .icon {
-  font-size: 18px;
-  color: #ccc;
-  cursor: pointer;
-}
-
-.editor {
-  flex: 1;
-  background: #1e1e1e;
-  display: flex;
-  flex-direction: column;
-}
-
-.tab-bar {
-  background: #2d2d2d;
-  display: flex;
-  padding: 4px;
-}
-
-.tab {
-  padding: 6px 12px;
-  margin-right: 4px;
-  background: #3c3c3c;
-  color: #ccc;
-  cursor: pointer;
-}
-
-.tab.active {
-  background: #1e1e1e;
-  border-bottom: 2px solid #007acc;
-}
-
-.code {
-  flex: 1;
-  overflow: auto;
-  padding: 16px;
-  background: #1e1e1e;
-  white-space: pre;
-  font-size: 14px;
-  line-height: 1.5;
-}
-
-.mouse {
-} */
-
 .window {
   background-color: rgb(24, 24, 24);
   position: absolute;
@@ -192,15 +92,39 @@
   cursor: pointer;
   background-color: rgb(22, 22, 22);
 }
-.aside_nav_Ul_projetos {
+
+/*Ul primeira*/
+.primeiraUl_projetos {
   display: flex;
-  gap: 10px;
 }
-.aside_nav_Ul_projetos div {
+
+.primeiraUl_projetos .list_hover:hover {
+  background-color: rgb(22, 22, 22);
+}
+
+/*Titulo projetos*/
+.title_projetos_flex {
+  display: flex;
+  align-items: center;
+}
+.ul_li_div_title_projetos:hover {
+  background-color: rgb(22, 22, 22);
+}
+
+/*div dos nomes projetos/sobre/contatos */
+.ul_projetos_divNames {
   width: 80%;
   margin: auto;
 }
-
+/*lista dentro da 1 lista*/
+.segundaUl_dentro_projetos li {
+  padding: 4px;
+  border-bottom: 1px solid transparent;
+}
+.segundaUl_dentro_projetos li:hover {
+  border-bottom: 1px solid #fff;
+  background-color: rgb(22, 22, 22);
+}
 .main {
   width: 90%;
   margin: auto;

@@ -101,18 +101,52 @@ export function VisualCode() {
               <h2 className="text_green">Portfolio</h2>
             </div>
             {portfolio ? (
-              <ul className={styles.aside_nav_Ul_projetos}>
-                <li onClick={() => openProjetos()}>
-                  {" "}
-                  <div>
-                    <span>{projetos ? "⮟" : "⮞"}</span>Projetos
+              <ul className={styles.primeiraUl_projetos}>
+                <li>
+                  <div
+                    onClick={() => openProjetos()}
+                    className={styles.ul_li_div_title_projetos}
+                  >
+                    <div
+                      className={`${styles.ul_projetos_divNames} ${styles.title_projetos_flex} ${styles.list_hover} ${styles.margin_li_names}`}
+                    >
+                      <span>{projetos ? "⮟" : "⮞"}</span>
+                      <div>Projetos</div>
+                    </div>
+                  </div>
+                  {projetos ? (
+                    <ul className={styles.segundaUl_dentro_projetos}>
+                      <li>
+                        <div className={styles.ul_projetos_divNames}>Hizus</div>
+                      </li>
+                      <li>
+                        <div className={`${styles.ul_projetos_divNames}`}>
+                          AnimeOrange
+                        </div>
+                      </li>
+                      <li>
+                        <div className={`${styles.ul_projetos_divNames}`}>
+                          Descriptografar
+                        </div>
+                      </li>
+                    </ul>
+                  ) : (
+                    ""
+                  )}
+                </li>
+                <li
+                  className={`${styles.list_hover} ${styles.margin_li_names}`}
+                >
+                  <div className={`${styles.ul_projetos_divNames}`}>
+                    Sobre-mim.html
                   </div>
                 </li>
-                <li>
-                  <div>Sobre mim</div>
-                </li>
-                <li>
-                  <div>Contatos</div>
+                <li
+                  className={`${styles.list_hover} ${styles.margin_li_names}`}
+                >
+                  <div className={`${styles.ul_projetos_divNames}`}>
+                    Contatos.html
+                  </div>
                 </li>
               </ul>
             ) : (
