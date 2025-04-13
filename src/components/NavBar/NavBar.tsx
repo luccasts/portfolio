@@ -1,7 +1,7 @@
 import styles from "./NavBar.module.css";
 export function NavBar() {
   return (
-    <header>
+    <header className={styles.header}>
       <nav className={styles.nav}>
         <div className={styles.nav_names}>
           <div>♦ </div>

@@ -1,12 +1,17 @@
+import { Route, Routes } from "react-router";
 import "./App.css";
-import { HackerParticles } from "./components/HackerParticles/HackerParticles";
-import { Home } from "./pages/Home";
+
+import { Layout } from "./components/Layout/Layout";
+import { AboutPage } from "./pages/About/AboutPage";
+import { ProjetosPage } from "./pages/Projetos/ProjetosPage";
 
 export function RouterPage() {
   return (
-    <div>
-      <HackerParticles />
-      <Home />
-    </div>
+    <Routes>
+      <Route element={<Layout />}>
+        <Route path="/" index element={<AboutPage />} />
+        <Route path="/projetos" index element={<ProjetosPage />} />
+      </Route>
+    </Routes>
   );
 }
