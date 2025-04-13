@@ -1,0 +1,32 @@
+.nav {
+  padding: 10px 10px 0px 10px;
+  background-color: rgb(44, 44, 44);
+}
+
+.nav_files ul {
+  display: flex;
+  gap: 4px;
+  list-style: none;
+
+  margin: 0px 0px 0px 30px;
+  padding: 16px 16px 8px 16px;
+}
+
+.nav_files li {
+  background-color: rgb(25, 25, 25);
+  padding: 8px;
+}
+
+.nav_names {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav_files .nav_files_select {
+  background-color: rgb(52, 52, 52);
+}
+
+.nav_files .page_active {
+  background-color: rgb(34, 34, 34);
+  border-bottom: 2px solid rgb(0, 255, 21);
+}

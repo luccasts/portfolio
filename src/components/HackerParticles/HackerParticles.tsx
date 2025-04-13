@@ -25,15 +25,13 @@ export const HackerParticles = () => {
     });
   }, []);
 
-  const particlesLoaded = async (container?: Container): Promise<void> => {
-    console.log(container);
-  };
+  const particlesLoaded = async (container?: Container): Promise<void> => {};
 
   const options: ISourceOptions = useMemo(
     () => ({
       background: {
         color: {
-          value: "#0f0f0f", // fundo estilo terminal
+          value: "#242424", // fundo estilo terminal
         },
       },
       fpsLimit: 60,

@@ -2,7 +2,7 @@ import "./App.css";
 import { HackerParticles } from "./components/HackerParticles/HackerParticles";
 import { Home } from "./pages/Home";
 
-function App() {
+export function RouterPage() {
   return (
     <div>
       <HackerParticles />
@@ -10,5 +10,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

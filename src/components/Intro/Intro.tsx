@@ -42,6 +42,7 @@ export function Intro() {
 
   return (
     <div className={styles.container}>
+      <h1 className={styles.h1}>Olá, eu sou o Lucas</h1>
       <h1 ref={titleRef} className={styles.title}>
         Luccasts
       </h1>

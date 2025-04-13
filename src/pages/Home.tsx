@@ -1,16 +1,10 @@
 import { useEffect, useRef } from "react";
 import photo from "../img/my.png";
-import "../styles/footer.css";
-import "../styles/habilidades.css";
-import "../styles/navbar.css";
-import "../styles/sobre.css";
 import gsap from "gsap";
 import styles from "./home.module.css";
-import { Intro } from "../components/Intro/Intro";
 import { VisualCode } from "../components/VisualCode/VisualCode";
 export const Home = () => {
   const containerRef = useRef<HTMLDivElement>(null);
-  // return (
   //   <>
   //     <header id="header">
   //       <ul>
@@ -160,8 +154,6 @@ export const Home = () => {
   return (
     <div ref={containerRef} className={styles.container}>
       <VisualCode />
-      <h1 className={styles.h1}>Olá, eu sou o Lucas</h1>
-      <Intro />
     </div>
   );
 };

@@ -1,0 +1,90 @@
+.aside {
+  position: absolute;
+  top: 36px;
+  bottom: 0;
+  background-color: rgb(38, 38, 38);
+}
+
+.asideUl_background {
+  background-color: rgb(38, 38, 38);
+  position: relative;
+  top: 0;
+}
+
+.aside ul {
+  display: flex;
+  flex-direction: column;
+
+  list-style: none;
+}
+
+.aside .asideUl_background li {
+  padding: 12px;
+  cursor: pointer;
+  border-bottom: 1px solid transparent;
+}
+
+.aside .asideUl_background li:hover {
+  position: relative;
+  background-color: rgb(35, 35, 35);
+  border-bottom: 1px solid var(--color-p);
+}
+.aside_nav {
+  position: absolute;
+  top: 0;
+  left: 50px;
+  bottom: 0;
+  background-color: rgb(32, 32, 32);
+}
+.aside_nav_div_title {
+  padding: 12px 32px 12px 32px;
+  background-color: rgb(44, 44, 44);
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+.aside_nav_div_title span {
+  color: var(--color-p);
+}
+
+.aside_nav_div_title:hover {
+  cursor: pointer;
+  background-color: rgb(22, 22, 22);
+}
+
+/*Ul primeira*/
+.primeiraUl_projetos {
+  display: flex;
+}
+.primeiraUl_projetos .list_hover {
+  padding: 6px 0px;
+}
+.primeiraUl_projetos .list_hover:hover {
+  background-color: rgb(22, 22, 22);
+}
+
+/*Titulo projetos*/
+.title_projetos_flex {
+  display: flex;
+  align-items: center;
+}
+.ul_li_div_title_projetos:hover {
+  background-color: rgb(22, 22, 22);
+}
+
+/*div dos nomes projetos/sobre/contatos */
+.ul_projetos_divNames {
+  width: 85%;
+  margin: auto;
+}
+/*lista dentro da 1 lista (segunda lista)*/
+.segundaUl_div_li {
+  width: 70%;
+}
+.segundaUl_dentro_projetos li {
+  padding: 4px;
+  border-bottom: 1px solid transparent;
+}
+.segundaUl_dentro_projetos li:hover {
+  background-color: rgb(22, 22, 22);
+}
