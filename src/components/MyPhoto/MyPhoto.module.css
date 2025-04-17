@@ -1,0 +1,19 @@
+.myphoto {
+  position: relative;
+  width: 300px;
+  height: auto;
+  z-index: auto;
+}
+
+.myphoto img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--color-p);
+  background-color: #272727;
+  border-radius: 2rem;
+  transition: transform 0.2s ease-out;
+  transform-origin: center center;
+  transform: rotate(0deg);
+  z-index: auto;
+}

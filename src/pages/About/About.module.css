@@ -2,3 +2,78 @@
   position: absolute;
   z-index: 3;
 }
+
+.icons img {
+  filter: brightness(0) saturate(100%) invert(60%) sepia(90%) hue-rotate(80deg)
+    brightness(130%) contrast(120%);
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 8px;
+  align-items: anchor-center;
+}
+
+.quadradoGithub > a > img {
+  max-width: calc(100vw - 70vw);
+  min-width: 200px;
+}
+.ul_tec {
+}
+
+.cursor {
+  animation: blink 1s steps(1) infinite;
+}
+.myphoto {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+.myphoto img {
+  border: 1px solid var(--color-p);
+  background-color: #272727;
+  border-radius: 2rem;
+  transition: transform 2s ease-in-out; /* Adjust duration and easing as needed */
+  transform-origin: center bottom;
+}
+.myphoto p {
+  min-width: 200px;
+  max-width: 900px;
+}
+
+.div_text {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.div1,
+.div2,
+.div3 {
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.div1 {
+  height: 85vh;
+}
+
+/* .myphoto img:hover {
+  transform: perspective(500px) rotateX(15deg);
+} */
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}

@@ -1,26 +1,71 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import styles from "./AsideNav.module.css";
+import gsap from "gsap";
 export function AsideNav() {
+  const navRef = useRef<HTMLHeadElement>(null);
+  const ulRef = useRef<HTMLUListElement>(null);
+  const twoUlRef = useRef<HTMLUListElement>(null);
   const [files, setFiles] = useState(false);
   const [portfolio, setPortfolio] = useState(false);
   const [projetos, setProjetos] = useState(false);
+  const tl = gsap.timeline();
+
+  useEffect(() => {
+    if (!files || !navRef.current) return;
+    tl.fromTo(
+      navRef.current,
+      { opacity: 0, x: -30 },
+      {
+        opacity: 1,
+        x: 0,
+        duration: 0.5,
+        ease: "power3.out",
+      }
+    );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [files]);
+  useEffect(() => {
+    if (!portfolio || !ulRef.current) return;
+    tl.fromTo(
+      ulRef.current,
+      {
+        opacity: 0,
+        y: 30,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.5,
+        ease: "power3.out",
+      }
+    );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [portfolio]);
+  useEffect(() => {
+    if (!projetos || !twoUlRef.current) return;
+    tl.fromTo(
+      twoUlRef.current,
+      {
+        opacity: 0,
+        y: 30,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.5,
+        ease: "power3.out",
+      }
+    );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [projetos]);
   function openProjetos() {
-    handleUseState(projetos, setProjetos);
+    setProjetos(!projetos);
   }
   function openFiles() {
-    handleUseState(files, setFiles);
+    setFiles(!files);
   }
   function openPortfolio() {
-    handleUseState(portfolio, setPortfolio);
-  }
-  function handleUseState(
-    open: boolean,
-    setOpen: React.Dispatch<React.SetStateAction<boolean>>
-  ) {
-    if (open) {
-      return setOpen(false);
-    }
-    setOpen(true);
+    setPortfolio(!portfolio);
   }
 
   return (
@@ -39,7 +84,7 @@ export function AsideNav() {
             <li>🔎</li>
           </ul>
           {files ? (
-            <nav className={styles.aside_nav}>
+            <nav ref={navRef} id="animationFolder" className={styles.aside_nav}>
               <div
                 onClick={() => openPortfolio()}
                 className={styles.aside_nav_div_title}
@@ -48,7 +93,7 @@ export function AsideNav() {
                 <h2 className="text_green">Portfolio</h2>
               </div>
               {portfolio ? (
-                <ul className={styles.primeiraUl_projetos}>
+                <ul ref={ulRef} className={styles.primeiraUl_projetos}>
                   <li>
                     <div
                       onClick={() => openProjetos()}
@@ -62,7 +107,10 @@ export function AsideNav() {
                       </div>
                     </div>
                     {projetos ? (
-                      <ul className={styles.segundaUl_dentro_projetos}>
+                      <ul
+                        ref={twoUlRef}
+                        className={styles.segundaUl_dentro_projetos}
+                      >
                         <li>
                           <div
                             className={`${styles.ul_projetos_divNames} ${styles.segundaUl_div_li}`}
@@ -93,7 +141,7 @@ export function AsideNav() {
                     className={`${styles.list_hover} ${styles.margin_li_names}`}
                   >
                     <div className={`${styles.ul_projetos_divNames}`}>
-                      Sobre-mim.html
+                      Sobre.html
                     </div>
                   </li>
                   <li

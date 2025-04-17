@@ -1,5 +1,8 @@
+import { Link, useLocation } from "react-router";
 import styles from "./NavBar.module.css";
 export function NavBar() {
+  const name = useLocation();
+
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
@@ -11,12 +14,26 @@ export function NavBar() {
           <div className={styles.nav_files}>
             <ul>
               <li
-                className={`${styles.nav_files_select} ${styles.page_active}`}
+                className={`${styles.nav_files_select} ${
+                  name.pathname === "/" ? styles.page_active : ""
+                } `}
               >
-                sobre-mim.html
+                <Link to={"/"}>sobre.html</Link>
               </li>
-              <li className={`${styles.nav_files_select}`}>projetos.html</li>
-              <li className={`${styles.nav_files_select}`}>contatos.html</li>
+              <li
+                className={`${styles.nav_files_select} ${
+                  name.pathname === "/projetos" ? styles.page_active : ""
+                } `}
+              >
+                <Link to={"/projetos"}> projetos.html </Link>
+              </li>
+              <li
+                className={`${styles.nav_files_select} ${
+                  name.pathname === "/contatos" ? styles.page_active : ""
+                }`}
+              >
+                <Link to={"/contatos"}> contatos.html </Link>
+              </li>
             </ul>
           </div>
         </div>

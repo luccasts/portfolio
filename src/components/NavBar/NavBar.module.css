@@ -1,8 +1,13 @@
 .header {
   position: sticky;
   top: 0px;
+  font-size: var(--font-size-header);
+  z-index: 2;
 }
 .nav {
+  /* position: absolute;
+  right: 0;
+  left: 0; */
   padding: 10px 10px 0px 10px;
   background-color: rgb(44, 44, 44);
 }
@@ -11,7 +16,7 @@
   display: flex;
   gap: 4px;
   list-style: none;
-
+  flex-wrap: wrap;
   margin: 0px 0px 0px 30px;
   padding: 16px 16px 8px 16px;
 }
@@ -33,4 +38,14 @@
 .nav_files .page_active {
   background-color: rgb(34, 34, 34);
   border-bottom: 2px solid rgb(0, 255, 21);
+}
+.nav_files_select a {
+  color: white;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 500px) {
+  .header {
+    position: relative;
+  }
 }

@@ -7,17 +7,16 @@ import { VisualCode } from "../VisualCode/VisualCode";
 import styles from "./Layout.module.css";
 import gsap from "gsap";
 import { Outlet } from "react-router";
+import { useGSAP } from "@gsap/react";
 export function Layout() {
   const containerRef = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    if (containerRef.current) {
-      gsap.fromTo(
-        containerRef.current,
-        { y: 50, opacity: 0 },
-        { y: 0, opacity: 1, duration: 1.2, ease: "power3.out" }
-      );
-    }
-  }, []);
+  useGSAP(() => {
+    gsap.fromTo(
+      containerRef.current,
+      { y: 50, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.5, ease: "sine" }
+    );
+  });
   return (
     <div>
       <HackerParticles />
