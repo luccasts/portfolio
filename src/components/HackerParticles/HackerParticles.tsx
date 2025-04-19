@@ -31,7 +31,7 @@ export const HackerParticles = () => {
     () => ({
       background: {
         color: {
-          value: "#242424", // fundo estilo terminal
+          value: "#0c0c0c", // #222222fundo estilo terminal
         },
       },
       fpsLimit: 60,
@@ -87,7 +87,7 @@ export const HackerParticles = () => {
           type: "circle",
         },
         size: {
-          value: { min: 1, max: 2 },
+          value: { min: 1, max: 3 },
           random: true,
         },
       },

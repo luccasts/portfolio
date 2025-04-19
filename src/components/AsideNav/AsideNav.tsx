@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import styles from "./AsideNav.module.css";
 import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 export function AsideNav() {
   const navRef = useRef<HTMLHeadElement>(null);
   const ulRef = useRef<HTMLUListElement>(null);
@@ -9,9 +10,7 @@ export function AsideNav() {
   const [portfolio, setPortfolio] = useState(false);
   const [projetos, setProjetos] = useState(false);
   const tl = gsap.timeline();
-
-  useEffect(() => {
-    if (!files || !navRef.current) return;
+  useGSAP(() => {
     tl.fromTo(
       navRef.current,
       { opacity: 0, x: -30 },
@@ -22,10 +21,8 @@ export function AsideNav() {
         ease: "power3.out",
       }
     );
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [files]);
-  useEffect(() => {
-    if (!portfolio || !ulRef.current) return;
+  useGSAP(() => {
     tl.fromTo(
       ulRef.current,
       {
@@ -39,10 +36,8 @@ export function AsideNav() {
         ease: "power3.out",
       }
     );
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [portfolio]);
-  useEffect(() => {
-    if (!projetos || !twoUlRef.current) return;
+  useGSAP(() => {
     tl.fromTo(
       twoUlRef.current,
       {
@@ -56,7 +51,6 @@ export function AsideNav() {
         ease: "power3.out",
       }
     );
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [projetos]);
   function openProjetos() {
     setProjetos(!projetos);
@@ -70,13 +64,6 @@ export function AsideNav() {
 
   return (
     <aside className={styles.aside}>
-      <div className={styles.fake_aside_background}>
-        <div className={styles.asideUl_background}>
-          <ul className={styles.asideUl_icons}>
-            <li style={{ display: "none" }}>📂</li>
-          </ul>
-        </div>
-      </div>
       <div className={styles.asideUl_background}>
         <div className={styles.both_aside}>
           <ul className={styles.asideUl_icons}>
@@ -90,7 +77,7 @@ export function AsideNav() {
                 className={styles.aside_nav_div_title}
               >
                 <span>{portfolio ? "⮟" : "⮞"}</span>
-                <h2 className="text_green">Portfolio</h2>
+                <h2 className="title_green">Portfolio</h2>
               </div>
               {portfolio ? (
                 <ul ref={ulRef} className={styles.primeiraUl_projetos}>

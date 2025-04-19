@@ -4,6 +4,7 @@ import styles from "./MyPhoto.module.css"; // Importe seus estilos CSS
 interface MyPhotoProps {
   src: string;
   alt?: string;
+  ref?: React.RefObject<HTMLDivElement>;
 }
 
 const MyPhoto: React.FC<MyPhotoProps> = ({ src, alt = "Imagem" }) => {
@@ -66,7 +67,7 @@ const MyPhoto: React.FC<MyPhotoProps> = ({ src, alt = "Imagem" }) => {
         src={src}
         alt={alt}
         style={{ transform: transformStyle }}
-        width={200}
+        width={500}
       />
     </div>
   );

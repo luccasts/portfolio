@@ -67,10 +67,14 @@ main {
 }
 
 /*CLASSE GERAL*/
-.text_green {
+.title_green {
   color: var(--color-title);
   font-size: var(--font-size-h1);
   font-weight: 400;
+}
+.paragraph_green {
+  color: var(--color-p);
+  font-size: var(--font-size-p);
 }
 
 /* MEDIA QUERRYYYYY*/

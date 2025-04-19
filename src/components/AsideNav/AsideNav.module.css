@@ -1,19 +1,11 @@
-.fake_aside_background {
-  position: absolute;
-  top: 36px;
-  bottom: 0;
-  background-color: rgb(38, 38, 38);
-  z-index: -1;
-}
 .aside {
   position: absolute;
   top: 36px;
   bottom: 0;
-  background-color: transparent;
 }
 /*  background-color: rgb(38, 38, 38);*/
 .asideUl_background {
-  background-color: rgb(38, 38, 38);
+  background-color: rgba(25, 25, 25, 0.9);
   position: sticky;
   top: 36px;
   z-index: 10;
@@ -49,11 +41,11 @@
   top: 0;
   left: 50px;
   bottom: 0;
-  background-color: rgb(32, 32, 32);
+  background-color: rgb(25, 25, 25);
 }
 .aside_nav_div_title {
   padding: 12px 32px 12px 32px;
-  background-color: rgb(44, 44, 44);
+  background-color: rgb(36, 45, 38);
   display: flex;
   gap: 4px;
   align-items: center;
@@ -73,7 +65,7 @@
   position: relative;
   top: 0;
   bottom: 0;
-  background-color: #202020;
+  background-color: rgb(25, 25, 25);
   font-size: var(--font-size-li);
 }
 .primeiraUl_projetos .list_hover {
@@ -111,11 +103,14 @@
 }
 
 @media screen and (max-width: 500px) {
-  .header {
-    position: relative;
+  .aside {
+    height: 100%;
   }
-
+  .both_aside {
+    height: 100vh;
+  }
   .asideUl_background {
     top: 0;
+    bottom: 0;
   }
 }

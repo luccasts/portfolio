@@ -22,8 +22,6 @@
   max-width: calc(100vw - 70vw);
   min-width: 200px;
 }
-.ul_tec {
-}
 
 .cursor {
   animation: blink 1s steps(1) infinite;
@@ -37,13 +35,6 @@
   z-index: 1;
 }
 
-.myphoto img {
-  border: 1px solid var(--color-p);
-  background-color: #272727;
-  border-radius: 2rem;
-  transition: transform 2s ease-in-out; /* Adjust duration and easing as needed */
-  transform-origin: center bottom;
-}
 .myphoto p {
   min-width: 200px;
   max-width: 900px;
@@ -56,24 +47,52 @@
 }
 
 .div1,
-.div2,
-.div3 {
-  height: 85vh;
+.div2 {
+  height: 50vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-
 .div1 {
   height: 85vh;
 }
+.div2 h2 {
+  text-decoration: underline;
+}
 
+.div2 {
+  gap: 16px;
+}
+
+.ul_tec {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ul_tec ul {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 8px;
+}
 /* .myphoto img:hover {
   transform: perspective(500px) rotateX(15deg);
 } */
 @keyframes blink {
   50% {
     opacity: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .div1 {
+    margin: 5rem 0px;
+  }
+  .div2 {
+    min-height: 600px;
   }
 }
