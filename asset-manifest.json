@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.6510e6d7.css",
-    "main.js": "/portfolio/static/js/main.18389dd6.js",
+    "main.css": "/portfolio/static/css/main.131a86a2.css",
+    "main.js": "/portfolio/static/js/main.3b4e4e22.js",
     "static/media/my.png": "/portfolio/static/media/my.c6781dcd1718993067b9.png",
     "static/media/Dosis-VariableFont.ttf": "/portfolio/static/media/Dosis-VariableFont.1af19a28a29fcb2321da.ttf",
+    "static/media/github.svg": "/portfolio/static/media/github.77e4d83847545a1fd9859db08709fdf2.svg",
     "index.html": "/portfolio/index.html",
-    "main.6510e6d7.css.map": "/portfolio/static/css/main.6510e6d7.css.map",
-    "main.18389dd6.js.map": "/portfolio/static/js/main.18389dd6.js.map"
+    "static/media/linkedinn.svg": "/portfolio/static/media/linkedinn.acde3389c42b5624fe066f127d14b98c.svg",
+    "main.131a86a2.css.map": "/portfolio/static/css/main.131a86a2.css.map",
+    "main.3b4e4e22.js.map": "/portfolio/static/js/main.3b4e4e22.js.map"
   },
   "entrypoints": [
-    "static/css/main.6510e6d7.css",
-    "static/js/main.18389dd6.js"
+    "static/css/main.131a86a2.css",
+    "static/js/main.3b4e4e22.js"
   ]
 }
